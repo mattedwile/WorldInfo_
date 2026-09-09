@@ -1,54 +1,78 @@
 # 🌍 WorldInfo
 
-### Country Information • Weather • Currency Conversion
+WorldInfo is a Python Flask web application that provides country information, country comparison, currency conversion, weather information, and other country-based features.
 
-WorldInfo is a Python Flask web application that provides country information, country comparison, weather information, currency conversion, search history, and random country features.
-
-The application combines a **Python Flask backend**, **SQLite database**, and **external APIs** for live information.
+The project uses **Python + Flask + SQLite + HTML/CSS**, with external APIs integrated for live currency exchange rates and weather data.
 
 ---
 
-# 🔗 Project Links
+## 🔗 Project Links
 
-## GitHub Repository
-
+### GitHub Repository
 https://github.com/yatharthkale/WorldInfo
 
-## Live Website
-
+### Live Website
 https://yatharthkale.pythonanywhere.com/
 
-## Deployment Platform
-
-https://www.pythonanywhere.com/
+### Main Backend File
+https://github.com/yatharthkale/WorldInfo/blob/main/worldinfo_api.py
 
 ---
 
-# 🛠️ Technology Stack
+# 🎯 Project Objective
 
-| Component | Technology |
+The main objective of WorldInfo is to provide useful country-related information through a simple web interface.
+
+The application combines:
+
+- Country information
+- Country comparison
+- Currency conversion
+- Weather information
+- Search history
+- Random country selection
+- REST API endpoints
+- SQLite database
+- External live APIs
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
 |---|---|
-| Programming Language | Python |
-| Backend Framework | Flask |
-| Database | SQLite |
-| HTTP/API Requests | Python Requests |
-| Weather API | Open-Meteo |
-| Currency API | open.er-api.com |
-| Currency Fallback API | Frankfurter |
-| Frontend | HTML + CSS + JavaScript |
-| Deployment | PythonAnywhere |
-| Source Control | GitHub |
+| Python | Main programming language |
+| Flask | Backend web framework |
+| SQLite | Database |
+| HTML | Frontend structure |
+| CSS | Frontend styling |
+| Requests | Connecting Flask with external APIs |
+| Open-Meteo API | Live weather data |
+| Exchange Rate API | Live currency exchange rates |
+| PythonAnywhere | Deployment |
+| GitHub | Source code management |
 
 ---
 
-# 📁 Project File Structure
+# 🏗️ Basic Architecture
 
 ```text
-WorldInfo/
-│
-├── worldinfo_api.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-└── worldinfo.db
+User
+  ↓
+HTML / CSS Frontend
+  ↓
+Flask Backend
+  ↓
+ ┌───────────────────────┐
+ │                       │
+SQLite Database       External APIs
+ │                       │
+ │                 ┌─────┴──────────┐
+ │                 │                │
+ │            Weather API     Currency API
+ │            Open-Meteo      ExchangeRate
+ │
+ ↓
+Backend processes data
+  ↓
+Frontend displays result
