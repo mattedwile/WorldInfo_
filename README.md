@@ -1,70 +1,64 @@
 # 🌍 WorldInfo
 
-WorldInfo is a Python Flask web application that provides country information, country comparison, currency conversion, and weather information.
+### Country Information • Comparison • Weather • Currency
 
-## 🚀 Live Website
+WorldInfo is a Python Flask web application designed to explore and compare countries while providing weather information and currency conversion.
 
-https://yatharthkale.pythonanywhere.com/
+---
 
-## 🛠️ Technologies Used
+## 🚀 Live Demo
 
-- Python
-- Flask
-- SQLite
-- HTML
-- CSS
-- REST APIs
-- JSON
+👉 https://yatharthkale.pythonanywhere.com/
 
-## ⚙️ Backend Architecture
+---
 
-Browser
-↓
-Flask (Python)
-↓
-├── SQLite Database
-├── Currency API
-└── Open-Meteo Weather API
+## ✨ Features
 
-## 🌦️ Weather
+- 🌍 Country information
+- ⚖️ Country comparison
+- 🌦️ Weather information
+- 💱 Currency conversion
+- 🔎 Country search
+- 🎲 Random country
+- 📊 JSON API endpoints
+- 🗄️ SQLite database
+- ☁️ Cloud deployment
 
-Weather information is retrieved through the Open-Meteo API.
+---
 
-## 💱 Currency Converter
+## 🛠️ Technologies
 
-Currency conversion uses an external exchange-rate API with a fallback service.
+| Technology | Purpose |
+|---|---|
+| Python | Backend programming |
+| Flask | Web framework & API |
+| SQLite | Database |
+| HTML | Website structure |
+| CSS | Website design |
+| REST APIs | External/live data |
+| JSON | Data exchange |
 
-## 🗄️ Database
+---
 
-SQLite is used to store structured country information and application data.
+## 🏗️ Architecture
 
-## 🔌 API Endpoints
-
-### Country
-
-/api/country/India
-
-### Countries
-
-/api/countries
-
-### Weather
-
-/api/weather/India
-
-### Currency
-
-/api/convert?from=USD&to=INR&amount=100
-
-### Health
-
-/health
-
-## 📁 Project Structure
-
-worldinfo_api.py
-worldinfo.db
-
-## 👨‍💻 Project
-
-WorldInfo is developed using Python Flask and deployed on PythonAnywhere.
+```text
+                    USER
+                     │
+                     ▼
+                 WEB BROWSER
+                     │
+                     ▼
+              ┌──────────────┐
+              │ Flask / Python│
+              │   Backend    │
+              └──────┬───────┘
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+       SQLite     Currency    Weather
+      Database       API         API
+          │          │            │
+          ▼          ▼            ▼
+      Country     Exchange     Open-Meteo
+       Data        Rates
